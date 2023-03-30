@@ -42,7 +42,23 @@
                 </nav>
             </div>
         </div>
-        {% block content %}{% endblock %}
+        {% block content %} 
+        <table style="border: 2px solid black; width:100%">
+            
+            <tr> <th>Nom</th> <th>Prenom</th> <th>mail</th><th>telephone</th><th>Date de naissance</th> </tr>
+
+            {% for data in datas %}
+
+            <TR>
+               <TD style="border: 2px solid black" class="c2">{{data[1]}}</TD>
+               <TD style="border: 2px solid black" class="c3">{{data[2]}}</TD>
+               <TD style="border: 2px solid black" class="c4">{{data[3]}}</TD>
+               <TD style="border: 2px solid black" class="c5">{{data[4]}}</TD>
+               <TD style="border: 2px solid black"class="c5">{{data[5]}}</TD>
+            </TR>
+            {% endfor %}
+            </table>
+            {% endblock %}
     </section>
     <footer>
         <nav class="navbar fixed-bottom navbar-light bg-light">
